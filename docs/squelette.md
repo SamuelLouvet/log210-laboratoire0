@@ -1,10 +1,10 @@
 # Squelette pour un API simple dans Node, Express et TypeScript
   
 ## Identification de l'étudiant
-  Nom: Entrer votre nom 
-  Courriel: Entrer votre courriel
-  Code Moodle: Entrer votre code moodle
-  Identifiant Github: Entrer l'identifiant de votre compte github
+  Nom: Louvet De Montella
+  Courriel: samuel.louvet-de-montella.1@ens.etsmtl.ca
+  Code Moodle: 0469
+  Identifiant Github: SamuelLouvet
 
 ## Introduction
 
@@ -159,13 +159,22 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 
 4. Le Joueur demande à terminer le jeu.
 1. ~~Le Système affiche un tableau de bord avec les noms des joueurs et le ratio des parties gagnées (nombre de fois gagné / nombre de lancers).~~
+   
+#### Redémarrer
+
+1. Le Joueur demande à redémarrer l'application.
+2. Le Système termine tous les jeux en cours et redémarre l'application.
 
 ### Diagramme de cas d'utilisation
 ![Diagramme de cas d'utilisation](modeles/dcu.svg)
 
-![Diagramme de cas d'utilisation]()
+![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/SamuelLouvet/log210-laboratoire0/main/docs/modeles/dcu.puml)
+
 ### Modèle du domaine
 ![Diagramme de classe du Modèle du domaine](modeles/MDD.svg)
+
+### Diagramme de classes logicielles
+![Diagramme de classes logicielles](modeles/App.svg)
 
 ### Diagramme de séquence système (DSS)
 ![Diagramme de séquence système](modeles/dss-jouer.svg)

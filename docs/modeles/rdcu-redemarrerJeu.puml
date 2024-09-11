@@ -1,0 +1,19 @@
+@startuml
+skinparam style strictuml
+participant ":JeuDeDes"
+participant "joueurs: Map<String, Joueur>"
+
+-> ":JeuDeDes" : redemarrerJeu()
+
+note right of ":JeuDeDes"
+  selon Contrôleur
+  (JeuDeDes est l'objet racine)
+end note
+
+":JeuDeDes" -> "joueurs: Map<String, Joueur>" : clear()
+
+note right of "joueurs: Map<String, Joueur>"
+  selon Expert
+end note
+
+@enduml

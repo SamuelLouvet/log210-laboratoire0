@@ -61,13 +61,15 @@ class App {
 
     // Route pour classement (stats)
     router.get('/stats', (req, res, next) => {
+      const joueurs = JSON.parse(jeuRoutes.controleurJeu.joueurs);
+      const joueursWithRatio = joueurs.map(joueur => { return { nom: joueur.nom, ratio: joueur.lancersGagnes / joueur.lancers } });
       res.render('stats',
         // passer objet au gabarit (template) Pug
         {
           title: `${titreBase}`,
           user: user,
           // créer nouveau tableau de joueurs qui est trié par ratio
-          joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs)
+          joueurs: joueursWithRatio.sort((a, b) => b.ratio - a.ratio)
         });
     });
 

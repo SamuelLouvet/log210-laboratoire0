@@ -1,9 +1,24 @@
-// Vous devez insérer les nouveaux tests ici
+import request from 'supertest';
+import app from '../../../src/app'; // Import your Express app
 import { assert } from 'console';
 import 'jest-extended';
+import { Joueur } from '../../../src/core/joueur';
 
-describe('redemarrerJeu.test.ts', () => {
-  it("should implement test", async () => {
-    throw new Error("Ce test n'a pas été défini")
+describe('GET /api/v1/jeu/redemarrerJeu', () => {
+  beforeAll(async () => {
+    const joueur1 = new Joueur("joueur1");
+    const joueur2 = new Joueur("joueur2");
   });
+
+  it("redemarrerJeu() should return 200 and JSON as response", async () => {
+    const response = await request(app).get('/api/v1/jeu/redemarrerJeu');
+    expect(response.status).toEqual(200);
+    expect(response.headers['content-type']).toContain('application/json');
+  });
+
+  it("redemarrerJeu() postcondition no more players", async () => {
+    await request(app).get('/api/v1/jeu/redemarrerJeu');
+    const playersResponse = await request(app).get('/api/v1/jeu/joueurs');
+    expect(playersResponse.body).toBeEmpty();
+});
 });

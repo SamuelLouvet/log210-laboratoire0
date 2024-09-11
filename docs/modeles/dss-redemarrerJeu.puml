@@ -1,0 +1,8 @@
+@startuml DSS 
+title DSS pour le scénario Redémarrer
+skinparam style strictuml
+actor Joueur
+participant "Système" as Systeme
+
+Joueur -> Systeme : redémarrerJeu()
+@enduml
