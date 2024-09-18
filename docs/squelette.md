@@ -168,7 +168,7 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 ### Diagramme de cas d'utilisation
 ![Diagramme de cas d'utilisation](modeles/dcu.svg)
 
-![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/SamuelLouvet/log210-laboratoire0/main/docs/modeles/dcu.puml)
+<!-- ![Diagramme de cas d'utilisation](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/SamuelLouvet/log210-laboratoire0/main/docs/modeles/dcu.puml) -->
 
 ### Modèle du domaine
 ![Diagramme de classe du Modèle du domaine](modeles/MDD.svg)
