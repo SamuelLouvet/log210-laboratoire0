@@ -21,4 +21,10 @@ describe('GET /api/v1/jeu/redemarrerJeu', () => {
     const playersResponse = await request(app).get('/api/v1/jeu/joueurs');
     expect(playersResponse.body).toBeEmpty();
 });
+
+it("should return a 404 error after trying to start a game after a restart without players", async () => {
+  await request(app).get('/api/v1/jeu/redemarrerJeu');
+  const response = await request(app).get('/api/v1/jeu/jouer/');
+  expect(response.status).toBe(404);
+});
 });
